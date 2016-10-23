@@ -21,7 +21,8 @@ jQuery(document).ready(function () {
 	
 	$('.qa-logo-link').removeAttr('title');
 
-	$('.qa-q-item-title a span, .qa-form-light-button-answer, .qa-favorite-button, .qa-unfavorite-button, .qa-nav-cat-link').tooltip({
+	$('.qa-q-item-title a span, .qa-form-light-button-answer, .qa-form-light-button-comment,'
+		+' .qa-favorite-button, .qa-unfavorite-button, .qa-nav-cat-link').tooltip({
 		placement : 'bottom'
 	});
 

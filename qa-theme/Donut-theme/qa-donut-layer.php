@@ -57,7 +57,7 @@
 
             $css_paths = array(
                     'fonts'     => 'css/font-awesome.min.css?4.2.0',
-                    'bootstrap' => 'css/bootstrap.min.css?3.3.5',
+                    'bootstrap' => 'css/bootstrap.min.css?3.3.7',
                     'donut'     => 'css/donut.css?' . DONUT_THEME_VERSION,
             );
 
@@ -167,7 +167,7 @@
             parent::head_script();
 
             $js_paths = array(
-                    'bootstrap' => 'js/bootstrap.min.js?3.3.5',
+                    'bootstrap' => 'js/bootstrap.min.js?3.3.7',
                     'donut'     => 'js/donut.js?' . DONUT_THEME_VERSION,
             );
 

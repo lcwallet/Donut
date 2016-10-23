@@ -50,6 +50,8 @@
 .pager:after,
 .panel-body:before,
 .panel-body:after,
+.modal-header:before,
+.modal-header:after,
 .modal-footer:before,
 .modal-footer:after,
 .qa-nav-sub .qa-nav-sub-list:before,
@@ -70,6 +72,7 @@
 .navbar-collapse:after,
 .pager:after,
 .panel-body:after,
+.modal-header:after,
 .modal-footer:after,
 .qa-nav-sub .qa-nav-sub-list:after {
   clear: both;
@@ -1515,6 +1518,9 @@ li.search-dropdown {
   border-radius: 3px;
 }
 /*Action buttons*/
+.action-buttons{
+  position: relative;
+}
 .action-buttons-dropdown.dropdown-menu {
   margin-top: 2px;
 }
