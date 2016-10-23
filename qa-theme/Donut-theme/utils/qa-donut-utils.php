@@ -168,7 +168,9 @@
 
     function donut_get_user_level( $userid )
     {
-        global $donut_userid_and_levels;
+        // static fields holds the values for next calls also 
+        static $donut_userid_and_levels;
+
         if ( empty( $donut_userid_and_levels ) ) {
             $donut_userid_and_levels = qa_db_read_all_assoc( qa_db_query_sub( "SELECT userid , level from ^users" ), 'userid' );
         }
