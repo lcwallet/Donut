@@ -4,6 +4,12 @@
         exit;
     }
 
+    if(!defined('DONUT_THEME_BASE_DIR')){
+        define( 'DONUT_THEME_BASE_DIR', realpath(dirname( __FILE__ ) . '/../') );
+        define( 'DONUT_THEME_BASE_DIR_NAME', basename( DONUT_THEME_BASE_DIR ) );
+        define( 'DONUT_THEME_TEMPLATE_DIR', DONUT_THEME_BASE_DIR . '/templates/' );
+    }
+
     function donut_get_glyph_icon( $icon )
     {
         if ( !empty( $icon ) ) {

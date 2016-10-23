@@ -244,13 +244,13 @@
 	&-first-button {
 		position: absolute;
 		left: 2px;
-		top: 6px;
+		top: 10px;
 	}
 
 	&-second-button {
 		position: absolute;
 		left: 2px;
-		bottom: 6px;
+		bottom: 4px;
 	}
 }
 
@@ -408,9 +408,9 @@
 	&.open-login-buttons {
 		a {
 			.btn-block();
-			color: #fff;
+			color: @body-bg;
 			&:hover {
-				color: #fff;
+				color: @body-bg;
 			}
 
 			&:before {
@@ -427,11 +427,11 @@
 	div.qa-part-custom {
 		a.open-login-button.context-register.action-login,
 		a.open-login-button.context-login.action-login, {
-			color: #fff;
+			color: @body-bg;
 			margin-right: 5%;
 			width: 40%;
 			&:hover {
-				color: #fff;
+				color: @body-bg;
 			}
 			@media @mobile {
 				.btn-block();
@@ -466,7 +466,8 @@
 	.qa-part-form-profile {
 		#level .qa-form-wide-static a {
 			.btn-sm();
-			&:before {
+		  	margin-bottom: 5px;
+			&[href*="message"]:before {
 				margin-right: 5px;
 				content: @fa-var-envelope-o;
 			}
@@ -615,7 +616,7 @@
 			border: medium none;
 			box-shadow: none;
 			display: block;
-			width: auto;
+			width: 100%;
 			padding: 6px 10px;
 			clear: both;
 			font-size: @font-size-base;

@@ -539,6 +539,14 @@
                         <div class="col-sm-7 navbar-collapse collapse main-nav navbar-left">
                             <ul class="nav navbar-nav inner-drop-nav">
                                 <?php $this->donut_nav_bar_main_links( $navigation['main'] ); ?>
+                                <li class="dropdown hidden-xs">
+                                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"> <span class="fa fa-search"></span> </a>
+                                    <ul class="dropdown-menu search-dropdown-menu">
+                                        <li class="search-dropdown">
+                                            <?php $this->search() ?>
+                                        </li>
+                                    </ul>
+                                </li>
                             </ul>
                         </div>
                     </div>
@@ -637,7 +645,7 @@
             $radios = 0;
 
             foreach ( $field['options'] as $tag => $value ) {
-                if ( $radios++ )
+                if ( $radios++ && !@$field['inline'])
                     $this->output( '<br/>' );
 
                 $this->output( '<input ' . @$field['tags'] . ' type="radio" value="' . $tag . '"' . ( ( $value == @$field['value'] ) ? ' checked' : '' ) . ' class="qa-form-' . $style . '-radio"/> ' . $value );
@@ -1298,7 +1306,7 @@
          */
         public function is_home()
         {
-            return empty( $this->request );
+            return empty( $this->request ) || (array_search('', qa_get_request_map()) == $this->request);
         }
 
         public function donut_site_header()

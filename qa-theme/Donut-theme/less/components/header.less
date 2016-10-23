@@ -56,7 +56,7 @@ header#nav-header{
 		opacity: .95;
 		left: 0;
 		right: 0;
-		box-shadow: 0 1px 15px 0 rgba(0, 0, 0, 0.2);
+		box-shadow: 0 1px 15px 0 rgba(0, 0, 0, 0.3);
 	}
 
 	&.affix-top {
@@ -143,7 +143,7 @@ header#nav-header{
 
 .nav .open > a {
 	&, &:hover, &:active, &:focus {
-		background-color: #fff;
+		background-color: @body-bg;
 		border-color: inherit;
 	}
 }
@@ -209,7 +209,7 @@ header#nav-header{
 			left: 50%;
 			top: -2px;
 			margin-left: -25px;
-			background-color: #fff;
+			background-color: @body-bg;
 			width: 50px;
 			text-align: center;
 			@media @mobile {
@@ -217,7 +217,7 @@ header#nav-header{
 			}
 		}
 		.hr-or {
-			background-color: #cdcdcd;
+			background-color: @body-bg;
 			height: 5px;
 			margin-top: 0px !important;
 			margin-bottom: 0px !important;
@@ -270,13 +270,13 @@ header#nav-header{
 			opacity: 1;
 		}
 		&, &:hover, &:active, &:focus {
-			background-color: #fff;
+			background-color: @body-bg;
 			.light-border();
 		}
 	}
 	&.navbar-login-button{
-		font-size: 20px;
-		line-height: 30px;
+		font-size: @font-size-large+2;
+		line-height: @line-height-small;
 	}
 	&.navbar-user-img {
 		img.qa-avatar-image {
@@ -396,9 +396,28 @@ header#nav-header{
 
 /* top portion of the body */
 .donut-masthead {
-	position: relative;
-	margin-bottom: 20px;
-	color: @brand-primary;
+  position: relative;
+  margin-bottom: 20px;
+  color: @brand-primary;
+  margin: 0px auto;
+  background: #fff;
+  .border-top-radius(1px);
+  .border-left-radius(1px);
+  .border-right-radius(1px);
+
+  @media (min-width: @screen-sm-min) {
+	width: @container-sm;
+  }
+  @media (min-width: @screen-md-min) {
+	width: @container-md;
+  }
+  @media (min-width: @screen-lg-min) {
+	width: @container-lg;
+  }
+
+  border: 1px solid #e6e6e6;
+  border-bottom: none;
+  margin-top: 15px;
 	.page-title {
 		border-bottom: 1px solid @light-border;
 	}
@@ -413,4 +432,11 @@ header#nav-header{
 		font-size: 29px;
 		margin: 0;
 	}
+}
+.search-dropdown-menu{
+  left: -10px;
+}
+li.search-dropdown{
+  padding: 0 10px 5px 10px;
+  width: 250px;
 }
