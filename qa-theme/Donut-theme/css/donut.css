@@ -3568,13 +3568,13 @@ a.qa-browse-cat-link:visited {
   border-bottom: medium none;
 }
 .qa-part-a-list > h2 {
-  font-size: 22px;
-  position: relative;
-  padding: 15px 5px;
-  background-color: #5cb85c;
-  color: #ffffff;
-  border: 1px solid #4cae4c;
+  padding: 15px;
+  margin-bottom: 20px;
+  border: 1px solid #bce8f1;
   border-radius: 4px;
+  background-color: #d9edf7;
+  color: #31708f;
+  font-size: 20px;
 }
 .qa-a-list-item {
   position: relative;
