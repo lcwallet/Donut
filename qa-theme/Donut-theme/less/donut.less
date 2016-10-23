@@ -1341,9 +1341,6 @@ html, body {
   }
 
   .qa-part-form-profile {
-    table.qa-form-wide-table {
-
-    }
     tr#permits {
       height: 100%;
     }
@@ -1359,6 +1356,11 @@ html, body {
     span.qa-form-wide-static {
       display: block;
       margin-left: 0;
+    }
+    .qa-form-wide-data {
+      select {
+        margin-bottom: 5px;
+      }
     }
   }
 
@@ -1435,5 +1437,28 @@ html, body {
   .not-found-text {
     font-size: 2em;
     padding: 20px 0;
+  }
+}
+
+.qa-template-admin{
+  .qa-q-item-stats {
+    display: none;
+  }
+  .qa-q-item-main {
+    width: auto;
+    float: none;
+  }
+  .qa-q-item-title {
+    margin-bottom: 10px;
+  }
+  .qa-q-item-content {
+    max-height: 200px;
+    overflow-y: auto;
+  }
+  .qa-q-item-avatar-meta {
+    border-top: 1px solid @gray-lighter;
+    border-bottom: 1px solid @gray-lighter;
+    padding: 5px;
+    margin: 10px 0;
   }
 }

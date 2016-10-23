@@ -4006,6 +4006,9 @@ a.qa-browse-cat-link:visited {
   display: block;
   margin-left: 0;
 }
+.qa-template-user .qa-part-form-profile .qa-form-wide-data select {
+  margin-bottom: 5px;
+}
 .qa-template-user .qa-part-form-activity h2 {
   margin-top: 0;
 }
@@ -4082,4 +4085,24 @@ a.qa-browse-cat-link:visited {
 .page-not-found .not-found-text {
   font-size: 2em;
   padding: 20px 0;
+}
+.qa-template-admin .qa-q-item-stats {
+  display: none;
+}
+.qa-template-admin .qa-q-item-main {
+  width: auto;
+  float: none;
+}
+.qa-template-admin .qa-q-item-title {
+  margin-bottom: 10px;
+}
+.qa-template-admin .qa-q-item-content {
+  max-height: 200px;
+  overflow-y: auto;
+}
+.qa-template-admin .qa-q-item-avatar-meta {
+  border-top: 1px solid #eeeeee;
+  border-bottom: 1px solid #eeeeee;
+  padding: 5px;
+  margin: 10px 0;
 }
