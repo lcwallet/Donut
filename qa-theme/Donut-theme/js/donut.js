@@ -21,7 +21,7 @@ jQuery(document).ready(function () {
 	
 	$('.qa-logo-link').removeAttr('title');
 
-	$('[title]').not('[class|="qa-vote"]').tooltip({
+	$('.qa-q-item-title a span, .qa-form-light-button-answer, .qa-favorite-button, .qa-unfavorite-button, .qa-nav-cat-link').tooltip({
 		placement : 'bottom'
 	});
 
