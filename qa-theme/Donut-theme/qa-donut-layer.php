@@ -275,7 +275,7 @@
             $this->output( '</h1>' );
 
             if ( $this->template == 'not-found' && qa_opt( 'donut_show_custom_404_page' ) ) {
-                $this->output( donut_include_template( 'page-not-found.php', false ) );
+                $this->output( donut_include_template( 'page-not-found.php', $this, false ) );
             } else if ( isset( $this->content['error'] ) )
                 $this->error( @$this->content['error'] );
 
@@ -515,7 +515,7 @@
             ob_start();
 
             if ( qa_opt( 'donut_enable_top_bar' ) ) {
-                donut_include_template( 'top-header.php' );
+                donut_include_template( 'top-header.php', $this );
             }
 
             ?>
@@ -1309,7 +1309,7 @@
                         @$_COOKIE['donut_hide_site_header'] : 'no';
 
                 if ( $user_hidden !== 'yes' )
-                    donut_include_template( 'site-header.php' );
+                    donut_include_template( 'site-header.php', $this );
             }
         }
 
@@ -1326,7 +1326,7 @@
 
         private function donut_site_stats_bottom()
         {
-            donut_include_template( 'site-stats-bottom.php' );
+            donut_include_template( 'site-stats-bottom.php', $this );
         }
 
         /**

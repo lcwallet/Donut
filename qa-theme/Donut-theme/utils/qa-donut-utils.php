@@ -252,12 +252,13 @@
         return qa_path_to_root() . donut_theme_folder();
     }
 
-    function donut_include_template( $template_file, $echo = true )
+    function donut_include_template( $template_file, $themeobject, $echo = true )
     {
         ob_start();
         require( DONUT_THEME_TEMPLATE_DIR . $template_file );
         $op = ob_get_clean();
-        if ( $echo ) echo $op;
+
+        if ( $echo ) $themeobject->output($op);
 
         return $op;
     }
