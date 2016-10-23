@@ -3587,8 +3587,7 @@ a.qa-browse-cat-link:visited {
   border-radius: 5px;
 }
 .qa-a-list-item-selected {
-  background: #eef7ea;
-  border: 1px solid #d6e9c6;
+  border: 2px solid #d6e9c6;
 }
 .qa-a-list-item-hidden {
   background-color: #fbfbfb;
@@ -3704,15 +3703,6 @@ a.qa-browse-cat-link:visited {
 .qa-c-list-item {
   padding: 8px;
   border-bottom: 1px solid #e2e2e2;
-}
-.qa-a-list-item-selected .qa-c-list-item {
-  border-bottom: 1px solid #d6e9c6;
-}
-.qa-a-list-item-selected .qa-a-item-c-list {
-  border-top: 1px solid #d6e9c6;
-}
-.qa-a-list-item-selected .qa-c-item-hidden .qa-c-item-content {
-  color: #777777;
 }
 .qa-c-item-hidden .qa-c-item-content {
   color: #777777;
