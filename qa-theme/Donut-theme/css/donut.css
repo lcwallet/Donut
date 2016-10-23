@@ -2293,6 +2293,10 @@ li.search-dropdown {
   margin-right: 5px;
   padding: 6px 0;
 }
+.qa-tags-rank-tag-count {
+  display: inline-block;
+  font-weight: bold;
+}
 .qa-q-view-tags {
   margin-bottom: 20px;
 }
@@ -2303,6 +2307,7 @@ li.search-dropdown {
   padding: 4px 10px;
   border: 1px solid #e2e2e2;
   border-radius: 3px;
+  display: inline-block;
 }
 .qa-tag-link:hover {
   color: #286090;

@@ -1139,7 +1139,7 @@
                 $this->output(
                         '<li class="tag-item">',
                         '<div class="tag-head clearfix">',
-                        '<span> ' . $item['count'] . ' &#215;</span>',
+                        '<div class="qa-tags-rank-tag-count"> ' . $item['count'] . ' &#215;</div>',
                         '<div class="qa-tags-rank-tag-item">',
                         $item['label'],
                         '</div>',
