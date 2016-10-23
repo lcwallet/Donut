@@ -36,6 +36,7 @@
         'donut_show_custom_404_page'         => 'Show custom 404 page',
         'donut_custom_404_text'              => 'Custom 404 text',
         'donut_use_local_font'               => 'Use local font (Google fonts will be loaded if unchecked)',
+        'donut_show_search_on_header'        => 'Show search button on header',
     );
 
     /*

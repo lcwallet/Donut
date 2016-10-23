@@ -35,6 +35,7 @@
             'donut_show_social_links_at_footer'  => 1,
             'donut_show_copyright_at_footer'     => 1,
             'donut_show_custom_404_page'         => 1,
+            'donut_show_search_on_header'        => 1,
             'donut_copyright_text'               => donut_lang( 'donut_theme' ),
             'donut_banner_head_text'             => donut_lang( 'donut_discussion_forum' ),
             'donut_banner_div1_text'             => donut_lang( 'search_answers' ),
@@ -48,30 +49,11 @@
             'donut_custom_404_text'              => donut_lang( 'page_not_found_default_text' ),
         );
 
-        if ( isset( $fixed_defaults[$name] ) ) {
-            $value = $fixed_defaults[$name];
-        } else {
-            switch ( $name ) {
-
-                default: // call option_default method in any registered modules
-                    $modules = qa_load_all_modules_with( 'option_default' );  // Loads all modules with the 'option_default' method
-
-                    foreach ( $modules as $module ) {
-                        $value = $module->option_default( $name );
-                        if ( strlen( $value ) )
-                            return $value;
-                    }
-
-                    $value = '';
-                    break;
-            }
-        }
-
-        return $value;
+        return @$fixed_defaults[$name] ;
     }
 
     /**
-     * Returns an array of all options used in Blog Tool
+     * Returns an array of all options used in Donut theme
      *
      * @return array
      */
@@ -102,6 +84,9 @@
             'donut_banner_div3_icon',
             'donut_top_bar_left_text',
             'donut_top_bar_right_text',
+            'donut_show_custom_404_page',
+            'donut_show_search_on_header',
+            'donut_custom_404_text',
         );
     }
 

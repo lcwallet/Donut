@@ -47,6 +47,7 @@
         'donut_show_social_links_at_footer'  => 'checkbox',
         'donut_show_copyright_at_footer'     => 'checkbox',
         'donut_show_custom_404_page'         => 'checkbox',
+        'donut_show_search_on_header'        => 'checkbox',
         'donut_copyright_text'               => 'text',
         'donut_banner_head_text'             => 'text',
         'donut_banner_div1_text'             => 'text',
@@ -86,7 +87,7 @@
             $subtitle = 'general';
             $showoptions = array( 'donut_general_settings_notice', 'donut_activate_prod_mode', 'donut_use_local_font','donut_enable_top_bar', 'donut_top_bar_left_text', 'donut_top_bar_right_text', 'donut_show_top_social_icons', 'donut_enable_sticky_header', 'donut_enable_back_to_top_btn' );
             array_push( $showoptions, 'donut_show_collapsible_btns' );
-            array_push( $showoptions, 'donut_show_custom_404_page', 'donut_custom_404_text' );
+            array_push( $showoptions, 'donut_show_custom_404_page', 'donut_custom_404_text', 'donut_show_search_on_header' );
 
             array_push( $showoptions, 'donut_homepage_settings_notice', 'donut_show_home_page_banner', 'donut_banner_head_text', 'donut_banner_div1_text', 'donut_banner_div1_icon', 'donut_banner_div2_text', 'donut_banner_div2_icon', 'donut_banner_div3_text', 'donut_banner_div3_icon', 'donut_banner_show_ask_box', 'donut_banner_closable' );
 
@@ -294,6 +295,7 @@
                 case 'donut_show_social_links_at_footer':
                 case 'donut_show_copyright_at_footer':
                 case 'donut_show_custom_404_page':
+                case 'donut_show_search_on_header':
                     $optionfield['style'] = 'tall';
                     break;
             }

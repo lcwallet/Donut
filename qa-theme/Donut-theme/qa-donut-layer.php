@@ -539,6 +539,7 @@
                         <div class="col-sm-7 navbar-collapse collapse main-nav navbar-left">
                             <ul class="nav navbar-nav inner-drop-nav">
                                 <?php $this->donut_nav_bar_main_links( $navigation['main'] ); ?>
+                                <?php if ( qa_opt('donut_show_search_on_header') ): ?>
                                 <li class="dropdown hidden-xs">
                                     <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"> <span class="fa fa-search"></span> </a>
                                     <ul class="dropdown-menu search-dropdown-menu">
@@ -547,6 +548,7 @@
                                         </li>
                                     </ul>
                                 </li>
+                                <?php endif ?>
                             </ul>
                         </div>
                     </div>
