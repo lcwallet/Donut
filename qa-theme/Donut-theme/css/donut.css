@@ -1518,9 +1518,6 @@ li.search-dropdown {
   border-radius: 3px;
 }
 /*Action buttons*/
-.action-buttons{
-  position: relative;
-}
 .action-buttons-dropdown.dropdown-menu {
   margin-top: 2px;
 }
@@ -1849,6 +1846,7 @@ li.search-dropdown {
   background-color: #d9534f;
   color: #ffffff;
   padding: 10px 12px;
+  z-index: 1000 !important;
 }
 .qa-search-button:hover,
 .qa-search-button:active,
