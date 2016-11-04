@@ -631,10 +631,10 @@ a.qa-browse-cat-link,a.qa-browse-cat-link:visited{font-weight:700;text-decoratio
 .qa-a-selection .qa-waiting{position:absolute;padding:0;left:50%;top:50%;margin:-7px 0 0 -7px}
 .qa-browse-cat-favorited:before,.qa-cat-favorited:before,.qa-nav-cat-favorited:before,.qa-q-favorited .qa-q-item-title a:before,.qa-tag-favorited:before,.qa-tag-favorited:hover:before,.qa-user-favorited:before{content:"\f005";padding-right:5px;color:#f0ad4e}
 .qa-cat-parent-favorited:before{content:"\f005";padding-right:5px;color:#f2b866}
-.qa-template-user .qa-part-form-activity,.qa-template-user .qa-part-form-badges-list,.qa-template-user .qa-part-form-profile,.qa-template-user .qa-part-message-list{border:1px solid transparent;-webkit-box-shadow:0 1px 1px rgba(0,0,0,.05);box-shadow:0 1px 1px rgba(0,0,0,.05);border-color:#ddd;position:relative;min-height:1px;padding:15px;margin-bottom:3px;overflow:hidden;width:100%}
-@media only screen and (min-width:992px){.qa-template-user .qa-part-form-activity,.qa-template-user .qa-part-form-badges-list,.qa-template-user .qa-part-form-profile,.qa-template-user .qa-part-message-list{width:49.9%;float:left}}
-.qa-template-user .qa-part-form-activity>h2>a:hover,.qa-template-user .qa-part-form-badges-list>h2>a:hover,.qa-template-user .qa-part-form-profile>h2>a:hover,.qa-template-user .qa-part-message-list>h2>a:hover{text-decoration:none;cursor:pointer}
-.qa-template-user .qa-part-form-activity,.qa-template-user .qa-part-form-badges-list,.qa-template-user .qa-part-message-list{float:right;clear:right}
+.qa-template-user .qa-part-message-list,.qa-template-user [class^=qa-part-form]{border:1px solid transparent;-webkit-box-shadow:0 1px 1px rgba(0,0,0,.05);box-shadow:0 1px 1px rgba(0,0,0,.05);border-color:#ddd;position:relative;min-height:1px;padding:15px;margin-bottom:3px;overflow:hidden;width:100%;float:right;clear:right}
+@media only screen and (min-width:992px){.qa-template-user .qa-part-message-list,.qa-template-user [class^=qa-part-form]{width:49.9%}}
+.qa-template-user .qa-part-message-list>h2>a:hover,.qa-template-user [class^=qa-part-form]>h2>a:hover{text-decoration:none;cursor:pointer}
+.qa-template-user .qa-part-form-profile{float:left}
 .qa-template-user .qa-part-form-profile tr#permits{height:100%}
 .qa-template-user .qa-part-form-profile tbody#avatar .qa-avatar-image{padding:4px;line-height:1.42857143;background-color:#fff;border:1px solid #ddd;border-radius:4px;-webkit-transition:all .2s ease-in-out;-o-transition:all .2s ease-in-out;transition:all .2s ease-in-out;display:inline-block;max-width:100%;height:auto}
 .qa-template-user .qa-part-form-profile td{word-wrap:break-word}
