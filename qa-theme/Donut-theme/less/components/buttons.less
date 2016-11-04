@@ -67,8 +67,7 @@
 	.button-size(@padding-base-vertical; @padding-base-horizontal; @font-size-base; @line-height-base; @btn-border-radius-base);
 	.user-select(none);
 	&:hover,
-	&:focus,
-	&.focus {
+	&:focus{
 		color: @btn-default-color;
 		text-decoration: none;
 	}
@@ -260,14 +259,12 @@
 	}
 }
 
-.qa-voted {
-	&-up-button {
-		color: @brand-success;
-	}
+.qa-voted-up-button {
+	color: @brand-success;
+}
 
-	&-down-button {
-		color: @brand-danger;
-	}
+.qa-voted-down-button {
+	color: @brand-danger;
 }
 
 /* Standard form (light version - buttons only) */
@@ -426,7 +423,7 @@
 .qa-template-login {
 	div.qa-part-custom {
 		a.open-login-button.context-register.action-login,
-		a.open-login-button.context-login.action-login, {
+		a.open-login-button.context-login.action-login {
 			color: @body-bg;
 			margin-right: 5%;
 			width: 40%;
@@ -585,6 +582,32 @@
 }
 
 /*Action buttons*/
+.action-buttons{
+	position: relative;
+	-webkit-transition: opacity .2s;
+	-o-transition: opacity .2s;
+	transition: opacity .2s;
+	opacity: 0;
+}
+
+.qa-q-view-main:hover{
+	.question-action-buttons {
+		opacity: 1;
+	}
+}
+
+.qa-a-item-main:hover{
+	.answer-action-buttons {
+		opacity: 1;
+	}
+}
+
+.qa-c-list-item:hover{
+	.comment-action-buttons {
+		opacity: 1;
+	}
+}
+
 .action-buttons-dropdown {
 	&.dropdown-menu {
 		margin-top: 2px;

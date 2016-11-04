@@ -212,29 +212,29 @@
             $this->output( '<div class="container visible-xs">' );
             $this->output( '<div class="top-search-bar">' );
             $this->search();
-            $this->output( '</div>' );
-            $this->output( '</div>' );
+            $this->output( '</div><!--End top search bar-->' );
+            $this->output( '</div><!--End top search bar container-->' );
 
-            $this->output( '<main class="donut-masthead">' );
+            $this->output( '<main class="qa-body-wrapper container">', '' );
 
-            $this->output( '<div class="container">' );
+            $this->output( '<div class="donut-masthead row">' );
+
+            $this->output( '<div class="notices-container">' );
             $this->notices();
-            $this->output( '</div>' );
+            $this->output( '</div><!--End notices-->' );
 
-            $this->output( '<div class="container">' );
+            $this->output( '<div class="header-container">' );
 
             $extra_title_class = $this->donut_page_has_favorite() ? ' has-favorite' : '';
 
             $this->output( '<div class="page-title' . $extra_title_class . '">' );
             $this->page_title_error();
-            $this->output( '</div>' );
+            $this->output( '</div><!--End page title-->' );
 
             $this->donut_breadcrumb();
-            $this->output( '</div>' );
+            $this->output( '</div><!--end header container-->' );
 
-            $this->output( '</main>' );
-
-            $this->output( '<div class="qa-body-wrapper container">', '' );
+            $this->output( '</div><!--Donut masthead-->' );
 
             $this->widgets( 'full', 'top' );
             $this->header();
@@ -255,7 +255,7 @@
             $this->footer();
             $this->widgets( 'full', 'bottom' );
 
-            $this->output( '</div> <!-- END body-wrapper -->' );
+            $this->output( '</main> <!-- END body-wrapper -->' );
 
             $this->body_suffix();
         }
@@ -1418,7 +1418,7 @@
                     $this->output( '<div class="default-buttons pull-left">' );
                     $this->form( $q_view['form'] );
                     $this->output( '</div>' );
-                    $this->donut_generate_action_button( $q_view_temp );
+                    $this->donut_generate_action_button( $q_view_temp , 'question');
                     $this->output( '</div>' );
                 }
             } else {
@@ -1437,7 +1437,7 @@
                     $this->output( '<div class="default-buttons pull-left">' );
                     $this->form( $a_item['form'] );
                     $this->output( '</div>' );
-                    $this->donut_generate_action_button( $a_item_temp );
+                    $this->donut_generate_action_button( $a_item_temp , 'answer');
                     $this->output( '</div>' );
                 }
             } else {
@@ -1450,7 +1450,7 @@
             if ( qa_opt( 'donut_show_collapsible_btns' ) ) {
                 if ( !empty( $c_item['form'] ) ) {
                     $this->output( '<div class="qa-c-item-buttons collapsed">' );
-                    $this->donut_generate_action_button( $c_item );
+                    $this->donut_generate_action_button( $c_item , 'comment');
                     $this->output( '</div>' );
                 }
             } else {
@@ -1458,12 +1458,12 @@
             }
         }
 
-        private function donut_generate_action_button( $action_view, $btn_style = 'vertical' )
+        private function donut_generate_action_button( $action_view, $prefix )
         {
-            $this->output( '<div class="action-buttons pull-right">' );
+            $this->output( '<div class="action-buttons '.$prefix.'-action-buttons pull-right">' );
             $this->output( '<div class="btn-group">' );
             $this->output( '<button type="button" class="qa-form-light-button dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" title="More actions">' );
-            $this->output( '<span class="glyphicon glyphicon-option-' . $btn_style . '"></span>' );
+            $this->output( '<span class="glyphicon glyphicon-menu-down"></span>' );
             $this->output( '</button>' );
             $this->donut_generate_action_dropdown( $action_view['form'] );
             $this->output( '</div>' );
