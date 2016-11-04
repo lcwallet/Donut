@@ -27,6 +27,7 @@ html, body {
 @import "components/votes.less";
 @import "components/tags.less";
 @import "components/navigation.less";
+@import "components/form.less";
 @import "components/responsive-utility.less";
 
 .qa-main,
@@ -291,65 +292,6 @@ html, body {
   }
   &-list {
     .pagination();
-  }
-}
-
-.qa-form-wide-spacer,
-.qa-form-tall-spacer {
-  line-height: 1px;
-  font-size: 1px;
-}
-
-.qa-form-tall-spacer {
-  padding: 0;
-}
-
-.qa-form-wide-spacer {
-  padding: 15px;
-}
-
-.qa-form-wide {
-  &-label {
-    min-width: 100px;
-  }
-
-  &-label,
-  &-data {
-    .light-border-bottom();
-    padding: 10px;
-  }
-
-  &-text,
-  &-number {
-
-  }
-
-  &-text {
-
-  }
-  &-table {
-    textarea {
-      &.qa-form-wide-text {
-        height: 125px;
-      }
-    }
-  }
-  &-number {
-
-  }
-
-  &-note {
-    font-size: @font-size-base;
-    margin-left: 5px;
-    color: @gray-light;
-  }
-
-  &-buttons {
-    padding: 8px;
-  }
-
-  &-prefix {
-
   }
 }
 
@@ -662,11 +604,11 @@ html, body {
     font-weight: 400;
     font-size: @font-size-base;
     color: @gray;
+    a {
+
+    }
   }
 
-  &-note a {
-
-  }
   &-nolink {
     cursor: pointer;
   }
@@ -1338,11 +1280,15 @@ html, body {
     td {
       word-wrap: break-word;
     }
+
+    span.qa-form-tall-note,
+    span.qa-form-tall-static,
     span.qa-form-wide-note,
     span.qa-form-wide-static {
       display: block;
       margin-left: 0;
     }
+    .qa-form-tall-data,
     .qa-form-wide-data {
       select {
         margin-bottom: 5px;

@@ -218,51 +218,6 @@ a.qa-form-tall-table > tbody > tr > td.qa-form-tall-error:focus,
 a.qa-form-wide-table > tbody > tr > td.qa-form-wide-error:focus {
   color: #843534;
 }
-.qa-form-tall-label,
-.qa-form-tall-data {
-  padding: 8px;
-}
-.qa-form-tall-label select {
-  margin-bottom: 5px;
-}
-.qa-form-tall-text,
-.qa-form-tall-number {
-  /* padding:3px;
-			width:48px;
-			background:@body-bg;
-			border:1px solid @input-border;  */
-}
-.qa-form-talltall-checkbox {
-  /* float:left;
-			margin-right:4px; */
-}
-.qa-form-tall-image {
-  text-align: center;
-}
-.qa-form-tall-image img {
-  padding: 4px;
-  line-height: 1.42857143;
-  background-color: #ffffff;
-  border: 1px solid #dddddd;
-  border-radius: 4px;
-  -webkit-transition: all 0.2s ease-in-out;
-  -o-transition: all 0.2s ease-in-out;
-  transition: all 0.2s ease-in-out;
-  display: inline-block;
-  max-width: 100%;
-  height: auto;
-}
-.qa-form-tall-suffix {
-  font-weight: 400;
-  font-size: 10px;
-  color: #777777;
-}
-.qa-form-tall-note {
-  padding: 10px 5px;
-}
-.qa-form-tall-buttons {
-  padding: 8px 8px 8px 8px;
-}
 .qa-q-view-content .entry-content img,
 .qa-a-item-content .entry-content img,
 .qa-c-item-content .entry-content img {
@@ -2453,6 +2408,76 @@ li.search-dropdown {
   color: #d9534f !important;
   font-weight: 700;
 }
+.qa-form-wide-spacer,
+.qa-form-tall-spacer {
+  line-height: 1px;
+  font-size: 1px;
+}
+.qa-form-tall-spacer {
+  padding: 0;
+}
+.qa-form-wide-spacer {
+  padding: 15px;
+}
+.qa-form-wide-label {
+  min-width: 100px;
+}
+.qa-form-wide-label,
+.qa-form-wide-data {
+  border-bottom: 1px solid transparent;
+  -webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.05);
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.05);
+  border-color: #eeeeee;
+  padding: 10px;
+}
+.qa-form-wide-table textarea.qa-form-wide-text {
+  height: 125px;
+}
+.qa-form-wide-note {
+  font-size: 14px;
+  margin-left: 5px;
+  color: #777777;
+}
+.qa-form-wide-buttons {
+  padding: 8px;
+}
+.qa-form-tall-label,
+.qa-form-tall-data {
+  padding: 8px;
+}
+.qa-form-tall-label select {
+  margin-bottom: 5px;
+}
+.qa-form-tall-image {
+  text-align: center;
+}
+.qa-form-tall-image img {
+  padding: 4px;
+  line-height: 1.42857143;
+  background-color: #ffffff;
+  border: 1px solid #dddddd;
+  border-radius: 4px;
+  -webkit-transition: all 0.2s ease-in-out;
+  -o-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+  display: inline-block;
+  max-width: 100%;
+  height: auto;
+}
+.qa-form-tall-suffix {
+  font-weight: 400;
+  font-size: 10px;
+  color: #777777;
+}
+.qa-form-tall-note {
+  padding: 10px 5px;
+  font-size: 14px;
+  margin-left: 5px;
+  color: #777777;
+}
+.qa-form-tall-buttons {
+  padding: 8px 8px 8px 8px;
+}
 @media only screen and (max-width: 767px) {
   .qa-main-wrapper {
     position: relative;
@@ -2922,39 +2947,6 @@ li.search-dropdown {
   background-color: #ffffff;
   border-color: #dddddd;
   cursor: not-allowed;
-}
-.qa-form-wide-spacer,
-.qa-form-tall-spacer {
-  line-height: 1px;
-  font-size: 1px;
-}
-.qa-form-tall-spacer {
-  padding: 0;
-}
-.qa-form-wide-spacer {
-  padding: 15px;
-}
-.qa-form-wide-label {
-  min-width: 100px;
-}
-.qa-form-wide-label,
-.qa-form-wide-data {
-  border-bottom: 1px solid transparent;
-  -webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.05);
-  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.05);
-  border-color: #eeeeee;
-  padding: 10px;
-}
-.qa-form-wide-table textarea.qa-form-wide-text {
-  height: 125px;
-}
-.qa-form-wide-note {
-  font-size: 14px;
-  margin-left: 5px;
-  color: #777777;
-}
-.qa-form-wide-buttons {
-  padding: 8px;
 }
 /* Question list */
 .qa-part-q-list {
@@ -3959,11 +3951,14 @@ a.qa-browse-cat-link:visited {
 .qa-template-user .qa-part-form-profile td {
   word-wrap: break-word;
 }
+.qa-template-user .qa-part-form-profile span.qa-form-tall-note,
+.qa-template-user .qa-part-form-profile span.qa-form-tall-static,
 .qa-template-user .qa-part-form-profile span.qa-form-wide-note,
 .qa-template-user .qa-part-form-profile span.qa-form-wide-static {
   display: block;
   margin-left: 0;
 }
+.qa-template-user .qa-part-form-profile .qa-form-tall-data select,
 .qa-template-user .qa-part-form-profile .qa-form-wide-data select {
   margin-bottom: 5px;
 }
