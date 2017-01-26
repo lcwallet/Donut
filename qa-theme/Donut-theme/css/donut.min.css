@@ -475,6 +475,7 @@ li.search-dropdown{padding:0 10px 5px;width:250px}
 .qa-q-list .qa-a-count .qa-a-count-data{font-size:12px;line-height:1.3333333;margin-top:5px}
 .qa-q-list .qa-a-count .qa-a-count-pad{font-size:8px}
 .qa-q-list .qa-q-item-main{padding-right:5px}}
+.qa-template-favorites .qa-q-list{float:none}
 .qa-q-list-item{padding:10px 0;border:1px solid transparent;-webkit-box-shadow:0 1px 1px rgba(0,0,0,.05);box-shadow:0 1px 1px rgba(0,0,0,.05);border-color:#ddd;margin-bottom:-1px}
 .qa-q-list-item:first-child{border-top-right-radius:5px;border-top-left-radius:5px}
 .qa-q-list-item:last-child{border-bottom-right-radius:5px;border-bottom-left-radius:5px}

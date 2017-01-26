@@ -3001,6 +3001,9 @@ li.search-dropdown {
     padding-right: 5px;
   }
 }
+.qa-template-favorites .qa-q-list {
+  float: none;
+}
 .qa-q-list-item {
   padding: 10px 0;
   border: 1px solid transparent;
