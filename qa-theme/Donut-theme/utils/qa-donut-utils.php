@@ -10,24 +10,42 @@
         define( 'DONUT_THEME_TEMPLATE_DIR', DONUT_THEME_BASE_DIR . '/templates/' );
     }
 
+    /**
+     * Returns the glyphicon notation for a icon 
+     * 
+     * @param  string $icon
+     * @return string
+     */
     function donut_get_glyph_icon( $icon )
     {
         if ( !empty( $icon ) ) {
             return '<span class="glyphicon glyphicon-' . $icon . '"></span> ';
-        } else {
-            return '';
         }
+        
+        return '';
     }
 
+    /**
+     * Returns the font awesome notation for a icon 
+     * 
+     * @param  string $icon
+     * @return string
+     */
     function donut_get_fa_icon( $icon )
     {
         if ( !empty( $icon ) ) {
             return '<span class="fa fa-' . $icon . '"></span> ';
-        } else {
-            return '';
         }
+
+        return '';
     }
 
+    /**
+     * Returns the icons for voting buttons 
+     * 
+     * @param  string $tags the icon tag 
+     * @return string font awesome icon html
+     */
     function donut_get_voting_icon( $tags )
     {
         $icon = '';
@@ -50,6 +68,14 @@
     }
 
     if ( !function_exists( 'starts_with' ) ) {
+
+        /**
+         * Checks if $heystack starts with the $needle
+         * 
+         * @param  string $haystack
+         * @param  string $needle   
+         * @return boolean
+         */
         function starts_with( $haystack, $needle )
         {
             return $needle === "" || strpos( $haystack, $needle ) === 0;
@@ -57,12 +83,26 @@
     }
 
     if ( !function_exists( 'ends_with' ) ) {
+
+        /**
+         * Checks if $heystack ends with the $needle
+         * 
+         * @param  string $haystack
+         * @param  string $needle   
+         * @return boolean
+         */
         function ends_with( $haystack, $needle )
         {
             return $needle === "" || substr( $haystack, -strlen( $needle ) ) === $needle;
         }
     }
 
+    /**
+     * Remove the brackets from the sidebase category 
+     * 
+     * @param  [type] &$nav_cat [description]
+     * @return [type]           [description]
+     */
     function donut_remove_brackets( &$nav_cat )
     {
         if ( is_array( $nav_cat ) && count( $nav_cat ) ) {
@@ -166,9 +206,15 @@
         }
     }
 
+    /**
+     * Returns points of a user
+     * 
+     * @param  integer $userid 
+     * @return integer
+     */
     function donut_get_user_level( $userid )
     {
-        // static fields holds the values for next calls also 
+        // static fields holds the values for subscquent invocations 
         static $donut_userid_and_levels;
 
         if ( empty( $donut_userid_and_levels ) ) {
@@ -306,6 +352,11 @@
         echo '</div>';
     }
 
+    /**
+     * Returns links for social profiles
+     * 
+     * @return array
+     */
     function donut_generate_social_links()
     {
 
