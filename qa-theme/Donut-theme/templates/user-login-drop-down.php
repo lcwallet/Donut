@@ -1,8 +1,9 @@
 <ul class="nav navbar-nav navbar-right login-nav">
     <li class="dropdown login-dropdown login active">
-        <a href="#" data-toggle="dropdown" class="navbar-login-button">
-            <span class="fa fa-sign-in text-muted"></span>
-        </a>
+        <button href="#" data-toggle="dropdown" class="btn btn-default navbar-btn navbar-login-button">
+            <span class="fa fa-sign-in text-muted"> </span>
+            <span class="hidden-xs hidden-sm"><?php echo $this->content['navigation']['user']['login']['label']; ?></span>
+        </button>
         <ul class="dropdown-menu" role="menu" id="login-dropdown-menu">
             <?php
                 if ( !empty( $this->content['navigation']['user'] ) ) {

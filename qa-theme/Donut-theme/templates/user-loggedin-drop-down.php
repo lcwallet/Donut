@@ -19,9 +19,9 @@
     </li>
     <?php endif ?>
     <li class="dropdown user-dropdown">
-        <a href="#" class="navbar-user-img dropdown-toggle" data-toggle="dropdown">
+        <button href="#" class="navbar-user-img dropdown-toggle" data-toggle="dropdown">
             <?php echo $logged_in_user_avatar; ?>
-        </a>
+        </button>
         <ul class="dropdown-menu" role="menu" id="user-dropdown-menu">
             <li class="dropdown-header">Signed in as <?php echo qa_get_logged_in_handle(); ?></li>
             <?php if ( qa_get_logged_in_level() >= QA_USER_LEVEL_ADMIN ): ?>

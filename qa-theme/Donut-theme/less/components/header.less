@@ -256,32 +256,22 @@ header#nav-header{
 	}
 }
 
-.navbar-nav > li > a {
+.navbar-nav > li > button {
 	&.navbar-user-img {
 		padding: 4px 6px;
-	}
-	&.navbar-login-button {
-		padding: 4px 10px;
-	}
-	&.navbar-user-img,
-	&.navbar-login-button {
-		& {
-			border-radius: 4px;
-			opacity: 1;
-		}
+		border-radius: 4px;
+		opacity: 1;
 		&, &:hover, &:active, &:focus {
 			background-color: @body-bg;
 			.light-border();
 		}
-	}
-	&.navbar-login-button{
-		font-size: @font-size-large+2;
-		line-height: @line-height-small;
-	}
-	&.navbar-user-img {
 		img.qa-avatar-image {
 			display: inline-block;
 		}
+	}
+	&.navbar-login-button {
+		margin-top: 2px;
+    	margin-bottom: 2px;
 	}
 }
 

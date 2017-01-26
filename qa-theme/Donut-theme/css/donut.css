@@ -471,37 +471,27 @@ header#nav-header {
     display: inline-block;
   }
 }
-.navbar-nav > li > a.navbar-user-img {
+.navbar-nav > li > button.navbar-user-img {
   padding: 4px 6px;
-}
-.navbar-nav > li > a.navbar-login-button {
-  padding: 4px 10px;
-}
-.navbar-nav > li > a.navbar-user-img,
-.navbar-nav > li > a.navbar-login-button {
   border-radius: 4px;
   opacity: 1;
 }
-.navbar-nav > li > a.navbar-user-img,
-.navbar-nav > li > a.navbar-login-button,
-.navbar-nav > li > a.navbar-user-img:hover,
-.navbar-nav > li > a.navbar-login-button:hover,
-.navbar-nav > li > a.navbar-user-img:active,
-.navbar-nav > li > a.navbar-login-button:active,
-.navbar-nav > li > a.navbar-user-img:focus,
-.navbar-nav > li > a.navbar-login-button:focus {
+.navbar-nav > li > button.navbar-user-img,
+.navbar-nav > li > button.navbar-user-img:hover,
+.navbar-nav > li > button.navbar-user-img:active,
+.navbar-nav > li > button.navbar-user-img:focus {
   background-color: #ffffff;
   border: 1px solid transparent;
   -webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.05);
   box-shadow: 0 1px 1px rgba(0, 0, 0, 0.05);
   border-color: #dddddd;
 }
-.navbar-nav > li > a.navbar-login-button {
-  font-size: 20px;
-  line-height: 1.5;
-}
-.navbar-nav > li > a.navbar-user-img img.qa-avatar-image {
+.navbar-nav > li > button.navbar-user-img img.qa-avatar-image {
   display: inline-block;
+}
+.navbar-nav > li > button.navbar-login-button {
+  margin-top: 2px;
+  margin-bottom: 2px;
 }
 @media only screen and (max-width: 767px) {
   .navbar .container {
