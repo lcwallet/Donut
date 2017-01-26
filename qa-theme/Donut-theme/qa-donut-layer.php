@@ -1012,7 +1012,6 @@
 
             if ( @$ranking['type'] == 'users' ) {
 
-
                 if ( count( $ranking['items'] ) ) {
                     $this->output( '<div class="page-users-list clearfix"><div class="row">' );
                     $columns = qa_opt( 'columns_users' );
@@ -1086,10 +1085,9 @@
                     $this->output( '</div>' );
                 } else {
                     $title = isset( $this->content['ranking_users']['title'] ) ? $this->content['ranking_users']['title'] : @$this->content['title'];
-                    $this->output( '
-								<div class="no-items">
-									<div class="alert alert-info"><span class="fa fa-warning"></span> ' . $title . '</div>
-								</div>' );
+                    $this->output( '<div class="no-items">',
+									'<div class="alert alert-info"><span class="fa fa-warning"></span> ' . $title . '</div>',
+								'</div>' );
                 }
 
 
@@ -1120,10 +1118,9 @@
 
                     $this->output( '</div>' );
                 } else {
-                    $this->output( '
-						<div class="no-items">
-						<div class="alert alert-info"><span class="fa fa-warning"></span> ' . $this->content['ranking_tags']['title'] . '</div>
-						</div>' );
+                    $this->output( '<div class="no-items">',
+						'<div class="alert alert-info"><span class="fa fa-warning"></span> ' . $this->content['ranking_tags']['title'] . '</div>',
+						'</div>' );
                 }
 
             } else {
@@ -1341,8 +1338,8 @@
 
         /**
          * Attribution for Donut theme
-         * Please do not remove this as you are using this for free .
-         * I will appreciate if you keep this on your site
+         * Please do not remove this as you are using this theme for free.
+         * I will appreciate if you keep this on your site and help the community to grow
          */
         private function donut_attribution()
         {
@@ -1378,10 +1375,14 @@
             $this->output( '</div>' );
         }
 
+        /**
+         * Output the widgets (as provided in $this->content['widgets']) for $region and $place
+         * 
+         * @param  string $region the region for the widgets 
+         * @param  string $place  the place for the wigets to be placed
+         * @return null
+         */
         public function widgets( $region, $place )
-            /*
-                Output the widgets (as provided in $this->content['widgets']) for $region and $place
-            */
         {
             if ( count( @$this->content['widgets'][$region][$place] ) ) {
                 $col = ( $region == 'full' ) ? ' col-xs-12' : '';
