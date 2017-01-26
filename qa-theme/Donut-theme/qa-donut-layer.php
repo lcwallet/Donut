@@ -13,7 +13,7 @@
         function doctype()
         {
             if ( !property_exists( 'qa_html_theme_base', 'isRTL' ) ) {
-                /*Fall back for the version 1.6.3*/
+                /*Fall back for the Q2A version 1.6.3*/
                 $this->isRTL = isset( $this->content['direction'] ) && $this->content['direction'] === 'rtl';
             }
 
@@ -153,13 +153,11 @@
          */
         function donut_utility_for_old_ie()
         {
-            $this->output( '
-					<!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
-					   <!--[if lt IE 9]>
-					     <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
-					     <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
-					<![endif]-->
-				' );
+            $this->output( '<!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->',
+					   '<!--[if lt IE 9]>',
+					     '<script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>',
+					     '<script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>',
+					'<![endif]-->' );
         }
 
         function head_script() // change style of WYSIWYG editor to match theme better
@@ -303,9 +301,9 @@
             $this->output( '<div class="qa-header clearfix">' );
             $this->header_clear();
             $this->header_custom();
-            $this->output( '</div> <!-- END qa-header -->', '' );
-            $this->output( '<div class="qa-main-shadow clearfix">', '' );
-            $this->output( '<div class="qa-main-wrapper clearfix row">', '' );
+            $this->output( '</div> <!-- END qa-header -->' );
+            $this->output( '<div class="qa-main-shadow clearfix">' );
+            $this->output( '<div class="qa-main-wrapper clearfix row">' );
         }
 
         function header_custom() // allows modification of custom element shown inside header after logo
