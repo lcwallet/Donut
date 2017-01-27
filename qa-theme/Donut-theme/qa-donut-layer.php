@@ -273,7 +273,7 @@
             $this->output( '</h1>' );
 
             if ( $this->template == 'not-found' && qa_opt( 'donut_show_custom_404_page' ) ) {
-                $this->output( donut_include_template( 'page-not-found.php', $this, false ) );
+                donut_include_template( 'page-not-found.php', $this );
             } else if ( isset( $this->content['error'] ) )
                 $this->error( @$this->content['error'] );
 
@@ -518,12 +518,10 @@
 
             ?>
             <header id="nav-header">
-                <nav id="nav" class="navbar navbar-static-top"
-                     role="navigation" <?php echo( qa_opt( 'donut_enable_sticky_header' ) ? 'data-spy="affix" data-offset-top="120"' : '' ) ?>>
+                <nav id="nav" class="navbar navbar-static-top" role="navigation" <?php echo( qa_opt( 'donut_enable_sticky_header' ) ? 'data-spy="affix" data-offset-top="120"' : '' ) ?>>
                     <div class="container">
                         <div class="navbar-header">
-                            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
-                                    data-target=".navbar-collapse">
+                            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target=".navbar-collapse">
                                 <span class="sr-only">Toggle navigation</span>
                                 <span class="glyphicon glyphicon-menu-hamburger"></span>
                             </button>
@@ -553,7 +551,14 @@
                 </nav>
             </header>
             <?php
-            return ob_get_clean();
+            $html = ob_get_clean();
+            
+            foreach (explode("\n", $html) as $htmlline) {
+                $op = trim($htmlline);
+                if(!empty($op))
+                    $this->output(trim($op));
+            }
+
         }
 
         /**
@@ -573,9 +578,7 @@
             $this->search_field( $search );
             // $this->search_button($search);
 
-            $this->output(
-                    '</form>'
-            );
+            $this->output('</form>');
         }
 
         /**
@@ -587,27 +590,26 @@
          */
         function search_field( $search )
         {
-            $this->output(
-                    '<div class="input-group">',
-                    '<input type="text" ' . $search['field_tags'] . ' value="' . @$search['value'] . '" class="qa-search-field form-control" placeholder="' . $search['button_label'] . '"/>' );
+            $this->output('<div class="input-group">');
+            $this->output('<input type="text" ' . $search['field_tags'] . ' value="' . @$search['value'] . '" class="qa-search-field form-control" placeholder="' . $search['button_label'] . '" ></input>' );
             $this->search_button( $search );
             $this->output( '</div>' );
         }
 
         public function form_password( $field, $style )
         {
-            $this->output( '<input ' . @$field['tags'] . ' type="password" value="' . @$field['value'] . '" class="qa-form-' . $style . '-text form-control"/>' );
+            $this->output( '<input ' . @$field['tags'] . ' type="password" value="' . @$field['value'] . '" class="qa-form-' . $style . '-text form-control" />' );
         }
 
         public function form_number( $field, $style )
         {
-            $this->output( '<input ' . @$field['tags'] . ' type="text" value="' . @$field['value'] . '" class="qa-form-' . $style . '-number form-control"/>' );
+            $this->output( '<input ' . @$field['tags'] . ' type="text" value="' . @$field['value'] . '" class="qa-form-' . $style . '-number form-control" />' );
         }
 
 
         public function form_text_single_row( $field, $style )
         {
-            $this->output( '<input ' . @$field['tags'] . ' type="text" value="' . @$field['value'] . '" class="qa-form-' . $style . '-text form-control"/>' );
+            $this->output( '<input ' . @$field['tags'] . ' type="text" value="' . @$field['value'] . '" class="qa-form-' . $style . '-text form-control" />' );
         }
 
         public function form_text_multi_row( $field, $style )
@@ -648,7 +650,7 @@
                 if ( $radios++ && !@$field['inline'])
                     $this->output( '<br/>' );
 
-                $this->output( '<input ' . @$field['tags'] . ' type="radio" value="' . $tag . '"' . ( ( $value == @$field['value'] ) ? ' checked' : '' ) . ' class="qa-form-' . $style . '-radio"/> ' . $value );
+                $this->output( '<input ' . @$field['tags'] . ' type="radio" value="' . $tag . '"' . ( ( $value == @$field['value'] ) ? ' checked' : '' ) . ' class="qa-form-' . $style . '-radio" /> ' . $value );
             }
         }
 
@@ -774,7 +776,7 @@
         {
             if ( isset( $post[$element] ) ) {
                 $icon = donut_get_voting_icon( $element );
-                $this->output( '<button ' . $post[$element] . ' type="submit" value="' . $value . '" class="' . $class . '-button"/> ' . $icon . '</button>' );
+                $this->output( '<button ' . $post[$element] . ' type="submit" value="' . $value . '" class="' . $class . '-button"> ' . $icon . '</button>' );
             }
         }
 
@@ -894,7 +896,7 @@
         {
             if ( isset( $post[$element] ) ) {
                 $icon = donut_get_voting_icon( $element );
-                $this->output( '<button ' . $post[$element] . ' type="submit" value="' . $value . '" class="' . $class . '-disabled" disabled="disabled"/> ' . $icon . '</button>' );
+                $this->output( '<button ' . $post[$element] . ' type="submit" value="' . $value . '" class="' . $class . '-disabled" disabled="disabled"> ' . $icon . '</button>' );
             }
         }
 

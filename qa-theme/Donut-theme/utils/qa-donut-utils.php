@@ -281,7 +281,7 @@
 
     function donut_get_default_avatar( $size = 40 )
     {
-        return '<img src="' . donut_theme_url() . '/images/default-profile-pic.png" width="' . $size . '" height="' . $size . '" class="qa-avatar-image" alt="">';
+        return '<img src="' . donut_theme_url() . '/images/default-profile-pic.png" width="' . $size . '" height="' . $size . '" class="qa-avatar-image" alt="" />';
     }
 
     /**
@@ -310,29 +310,35 @@
     {
         ob_start();
         require( DONUT_THEME_TEMPLATE_DIR . $template_file );
-        $op = ob_get_clean();
+        $html = ob_get_clean();
 
-        if ( $echo ) $themeobject->output($op);
+        if ( $echo ) {
+            foreach (explode("\n", $html) as $htmlline) {
+                $op = trim($htmlline);
+                if(!empty($op))
+                    $themeobject->output(trim($op));
+            }            
+        }
 
-        return $op;
+        return $html;
     }
 
     function donut_get_link( $params )
     {
         if ( !empty( $params['icon'] ) ) {
-            $icon = '<span class="fa fa-' . $params['icon'] . '"></span> ';
+            $icon = '<span class="fa fa-' . $params['icon'] . '"> </span>';
         }
 
         if ( @$params['tooltips'] ) {
             $tooltips_data = 'data-toggle="tooltip" data-placement="' . @$params['hover-position'] . '" title="' . $params['hover-text'] . '"';
         }
 
-        return sprintf( '<a href="%s" %s>%s %s</a>', @$params['link'], @$tooltips_data, @$icon, @$params['text'] );
+        return sprintf( '<a href="%s" %s>%s%s</a>', @$params['link'], @$tooltips_data, @$icon, @$params['text'] );
     }
 
     function donut_get_social_link( $params, $icon_only = false )
     {
-        if ( $icon_only ) $params['text'] = '';
+        if ( $icon_only ) unset($params['text']);
 
         $params['tooltips'] = true;
         $params['hover-position'] = 'bottom';
