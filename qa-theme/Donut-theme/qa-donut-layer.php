@@ -920,7 +920,7 @@
         {
             if ( isset( $tags ) ) {
                 $icon = donut_get_fa_icon( 'heart' );
-                $this->output( '<button ' . $tags . ' type="submit" value="" class="' . $class . '-button"/> ' . $icon . '</button>' );
+                $this->output( '<button ' . $tags . ' type="submit" value="" class="' . $class . '-button"> ' . $icon . '</button>' );
             }
         }
 
