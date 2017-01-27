@@ -306,6 +306,14 @@
         return qa_path_to_root() . donut_theme_folder();
     }
 
+    /**
+     * Include the template file from the temlate directory 
+     *
+     * @param  string  $template_file 
+     * @param  object  $themeobject   
+     * @param  boolean $echo          true if the output should be rendered 
+     * @return the outcome of the rendered template file
+     */
     function donut_include_template( $template_file, $themeobject, $echo = true )
     {
         ob_start();
@@ -313,14 +321,25 @@
         $html = ob_get_clean();
 
         if ( $echo ) {
-            foreach (explode("\n", $html) as $htmlline) {
-                $op = trim($htmlline);
-                if(!empty($op))
-                    $themeobject->output(trim($op));
-            }            
+            donut_render_formatted($html, $themeobject);
         }
 
         return $html;
+    }
+
+    /**
+     * Render the html in a formatted way. This splits the HTML into lines and then invokes $theme->output method to render the elements properly
+     * @param  string $html
+     * @param  object $themeobject
+     * @return null
+     */
+    function donut_render_formatted($html, $themeobject)
+    {
+        foreach (explode("\n", $html) as $htmlline) {
+            $op = trim($htmlline);
+            if(!empty($op))
+                $themeobject->output(trim($op));
+        }
     }
 
     function donut_get_link( $params )

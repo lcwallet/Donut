@@ -552,13 +552,7 @@
             </header>
             <?php
             $html = ob_get_clean();
-            
-            foreach (explode("\n", $html) as $htmlline) {
-                $op = trim($htmlline);
-                if(!empty($op))
-                    $this->output(trim($op));
-            }
-
+            donut_render_formatted($html, $this);
         }
 
         /**
