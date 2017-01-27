@@ -5,6 +5,11 @@
     }
 
     if(!defined('DONUT_THEME_BASE_DIR')){
+        /**
+         * These definitions always gets initialized in qa-theme.php. 
+         * But these constants won't be available when the utility methods are invoked from a plugin before the theme gets initialized. 
+         * So this is redefined.
+         */
         define( 'DONUT_THEME_BASE_DIR', realpath(dirname( __FILE__ ) . '/../') );
         define( 'DONUT_THEME_BASE_DIR_NAME', basename( DONUT_THEME_BASE_DIR ) );
         define( 'DONUT_THEME_TEMPLATE_DIR', DONUT_THEME_BASE_DIR . '/templates/' );
