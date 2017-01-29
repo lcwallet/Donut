@@ -1963,7 +1963,7 @@ fieldset[disabled] .qa-c-item-buttons.collapsed .default-buttons > .qa-form-ligh
 .qa-widget-side,
 .qa-nav-cat {
   background: #ffffff;
-  border-radius: 5px;
+  border-radius: 4px;
 }
 .qa-widget-side {
   margin-bottom: 20px;

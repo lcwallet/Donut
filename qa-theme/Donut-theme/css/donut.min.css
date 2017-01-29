@@ -291,7 +291,7 @@ li.search-dropdown{padding:0 10px 5px;width:250px}
 .qa-feed,.qa-nav-cat,.qa-sidebar,.qa-widget-side{border-radius:3px}
 .qa-widget-full-high,.qa-widget-main,.qa-widget-main-high{margin:0 0 15px}
 .qa-widget-main-bottom{margin-bottom:0}
-.qa-nav-cat,.qa-widget-side{background:#fff;border-radius:5px}
+.qa-nav-cat,.qa-widget-side{background:#fff;border-radius:4px}
 .qa-widget-side{margin-bottom:20px;background-color:#fff;border-radius:4px;border:1px solid transparent;-webkit-box-shadow:0 1px 1px rgba(0,0,0,.05);box-shadow:0 1px 1px rgba(0,0,0,.05);border-color:#ddd}
 .qa-widget-side>div{padding:10px 20px 20px}
 .qa-widget-side h2{margin:20px 0 10px!important;border-bottom:1px solid #eee!important;padding:0 10px 15px!important}
