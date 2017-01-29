@@ -170,6 +170,11 @@
         return false;
     }
 
+    /**
+     * @deprecated
+     *
+     * This function will be removed in later versions
+     */
     function donut_user_badge( $handle )
     {
         if ( qa_opt( 'badge_active' ) ) {
