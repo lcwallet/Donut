@@ -3297,13 +3297,8 @@ fieldset[disabled] .qa-c-item-buttons.collapsed .default-buttons > .qa-form-ligh
   margin-bottom: 20px;
 }
 .user-box-inner {
-  display: block;
   text-align: center;
-  border: 1px solid transparent;
-  -webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.05);
-  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.05);
-  border-color: #dddddd;
-  border-radius: 5px;
+  border-radius: 4px;
   padding: 6px;
   min-height: 165px;
   -webkit-box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12) !important;

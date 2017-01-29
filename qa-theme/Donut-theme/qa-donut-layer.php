@@ -1007,7 +1007,8 @@
             if ( @$ranking['type'] == 'users' ) {
 
                 if ( count( $ranking['items'] ) ) {
-                    $this->output( '<div class="page-users-list clearfix"><div class="row">' );
+                    $this->output( '<div class="page-users-list clearfix">');
+                    $this->output( '<div class="row">' );
                     $columns = qa_opt( 'columns_users' );
                     $pagesize = qa_opt( 'page_size_users' );
                     $start = qa_get_start();
@@ -1049,31 +1050,39 @@
                             $pointshtml = ( $userpoints === 1 ) ? qa_lang_html_sub( 'main/1_point', '1', '1' )
                                     : qa_lang_html_sub( 'main/x_points', qa_html( $userpoints ) );
                             if ( !empty( $pointshtml ) ) {
-                                $pointshtml = '<p class="score">' . $pointshtml . '</p>';
+                                $pointshtml = '<div class="score">' . $pointshtml . '</div> <!-- End of score -->';
                             }
                         }
 
-                        $this->output( '
-								<div class="user-box-inner">
-									<div class="user-avatar">
-										' . $avatar . '
-									</div>
-									<div class="user-data">
-										' . $handle_html . '
-										<div class="user-level">
-											' . $level_html . '
-										</div>
-										<div class="counts clearfix">
-											' . @$pointshtml . '
-										</div>
-								</div>' );
+                        $this->output( '<div class="user-box-inner">');
+							
+                            $this->output( '<div class="user-avatar">');
+								$this->output( $avatar );
+							$this->output( '</div> <!-- End of user-avatar -->' );
+							
+                            $this->output( '<div class="user-data">' );
+								
+                                $this->output( $handle_html );
+								
+                                $this->output( '<div class="user-level">');
+								$this->output( $level_html );
+								$this->output( '</div> <!-- End of user-level -->');
+							    
+                            if(isset($pointshtml)){
+                                $this->output( '<div class="counts">');
+    							$this->output( $pointshtml );
+    					        $this->output( '</div> <!-- End of counts -->' );
+					        }
 
-                        $this->output( '</div>' );
-                        $this->output( '</div>' );
+                            $this->output( '</div> <!-- End of user-data -->' );
+
+                        $this->output( '</div> <!-- End of user-box-inner -->' );
+                        $this->output( '</div> <!-- End of user-box -->' );
 
                     }
-                    $this->output( '</div>' );
-                    $this->output( '</div>' );
+
+                    $this->output( '</div> <!-- End of row -->' );
+                    $this->output( '</div> <!-- End of page-users-list -->' );
                 } else {
                     $title = isset( $this->content['ranking_users']['title'] ) ? $this->content['ranking_users']['title'] : @$this->content['title'];
                     $this->output( '<div class="no-items">',
