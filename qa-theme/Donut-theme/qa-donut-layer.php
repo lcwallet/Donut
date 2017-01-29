@@ -1444,8 +1444,14 @@
         {
             if ( qa_opt( 'donut_show_collapsible_btns' ) ) {
                 if ( !empty( $c_item['form'] ) ) {
+                    $c_item_temp = $c_item;
+                    $allowed_main_btns = array( 'comment' );
+                    $c_item_temp['form']['buttons'] = $this->donut_divide_array( $c_item['form']['buttons'], $allowed_main_btns );
                     $this->output( '<div class="qa-c-item-buttons collapsed">' );
-                    $this->donut_generate_action_button( $c_item , 'comment');
+                    $this->output( '<div class="default-buttons pull-right">' );
+                    $this->form( $c_item['form'] );
+                    $this->output( '</div>' );
+                    $this->donut_generate_action_button( $c_item_temp , 'comment');
                     $this->output( '</div>' );
                 }
             } else {
@@ -1457,7 +1463,7 @@
         {
             $this->output( '<div class="action-buttons '.$prefix.'-action-buttons pull-right">' );
             $this->output( '<div class="btn-group">' );
-            $this->output( '<button type="button" class="qa-form-light-button dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" title="More actions">' );
+            $this->output( '<button type="button" class="qa-form-light-button dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" title="'.donut_lang('more_actions').'">' );
             $this->output( '<span class="glyphicon glyphicon-menu-down"></span>' );
             $this->output( '</button>' );
             $this->donut_generate_action_dropdown( $action_view['form'] );

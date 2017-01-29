@@ -24,6 +24,7 @@
         'admin_notes'                 => 'Please visit to the `Admin/Donut theme settings` section for customizing the donut theme . Here only you can only reset the donut theme settings to its defaults',
         'ask_placeholder'             => 'Type your question',
         'ask_button'                  => 'Ask !',
+        'more_actions'                => 'More actions',
     );
 
     /*

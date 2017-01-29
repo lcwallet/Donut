@@ -27,7 +27,7 @@
                 
         </button>
 
-        <ul class="dropdown-menu" role="menu" id="user-dropdown-menu">
+        <ul class="dropdown-menu" role="menu" id="user-dropdown-menu" data-dropdown-in="fadeIn" data-dropdown-out="fadeOut">
             <li class="dropdown-header">Signed in as <?php echo qa_get_logged_in_handle(); ?></li>
             <?php if ( qa_get_logged_in_level() >= QA_USER_LEVEL_ADMIN ): ?>
                 <li class="dropdown-header">Admin Section</li>

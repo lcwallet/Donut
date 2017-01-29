@@ -656,6 +656,20 @@
 	right: 0
 }
 
+.qa-c-item-buttons .qa-form-light-button {
+  	.btn-xs();	
+}
+
+.qa-c-item-buttons,
+.qa-c-item-buttons.collapsed .default-buttons {
+	> .qa-form-light-button {
+	  	.btn-link();
+	  	margin-bottom: 0;
+	}
+}
+.qa-c-item-buttons.collapsed .default-buttons {
+	margin-left: 5px;
+}
 .qa-c-item-buttons.collapsed {
 	.action-buttons-dropdown {
 		&.dropdown-menu {
