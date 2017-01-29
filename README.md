@@ -56,7 +56,7 @@ Also it comes with an admin panel with bunch of options to let you change nearly
 ## Contribution guidelines
 
 * Fork the [repositary][] and make improvements. Feel free to send a Pull requests
-* If you are contributing language files then please send pull request to [this][Donut lang] repository. Since Donut 2.0, this repository only will host default language files
+* If you are contributing language files then please send pull request to [this repository][Donut lang] . Since Donut 2.0, this repository only will host default language files
 * Help me in testing the theme and finding the bugs 
 * Report [bugs][] here if you find any 
 * Review the code if you are a developer who loves q2a platform
