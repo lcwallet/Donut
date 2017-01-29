@@ -183,10 +183,43 @@ table .table {
 .qa-form-wide-ok,
 .qa-form-tall-table > tbody > tr > td.qa-form-tall-ok,
 .qa-form-wide-table > tbody > tr > td.qa-form-wide-ok {
+  padding: 15px;
+  margin-bottom: 20px;
+  border: 1px solid transparent;
+  border-radius: 4px;
   background-color: #dff0d8;
   border-color: #d6e9c6;
   color: #3c763d;
   display: block;
+}
+.qa-form-tall-ok h4,
+.qa-form-wide-ok h4,
+.qa-form-tall-table > tbody > tr > td.qa-form-tall-ok h4,
+.qa-form-wide-table > tbody > tr > td.qa-form-wide-ok h4 {
+  margin-top: 0;
+  color: inherit;
+}
+.qa-form-tall-ok .alert-link,
+.qa-form-wide-ok .alert-link,
+.qa-form-tall-table > tbody > tr > td.qa-form-tall-ok .alert-link,
+.qa-form-wide-table > tbody > tr > td.qa-form-wide-ok .alert-link {
+  font-weight: bold;
+}
+.qa-form-tall-ok > p,
+.qa-form-wide-ok > p,
+.qa-form-tall-table > tbody > tr > td.qa-form-tall-ok > p,
+.qa-form-wide-table > tbody > tr > td.qa-form-wide-ok > p,
+.qa-form-tall-ok > ul,
+.qa-form-wide-ok > ul,
+.qa-form-tall-table > tbody > tr > td.qa-form-tall-ok > ul,
+.qa-form-wide-table > tbody > tr > td.qa-form-wide-ok > ul {
+  margin-bottom: 0;
+}
+.qa-form-tall-ok > p + p,
+.qa-form-wide-ok > p + p,
+.qa-form-tall-table > tbody > tr > td.qa-form-tall-ok > p + p,
+.qa-form-wide-table > tbody > tr > td.qa-form-wide-ok > p + p {
+  margin-top: 5px;
 }
 .qa-form-tall-ok hr,
 .qa-form-wide-ok hr,
@@ -217,6 +250,14 @@ a.qa-form-wide-error:focus,
 a.qa-form-tall-table > tbody > tr > td.qa-form-tall-error:focus,
 a.qa-form-wide-table > tbody > tr > td.qa-form-wide-error:focus {
   color: #843534;
+}
+.qa-form-tall-table > tbody > tr > td.qa-form-tall-ok,
+.qa-form-wide-table > tbody > tr > td.qa-form-wide-ok,
+.qa-form-tall-table > tbody > tr > td.qa-form-tall-error,
+.qa-form-wide-table > tbody > tr > td.qa-form-wide-error {
+  display: table-cell !important;
+  border-radius: 0;
+  border: medium none;
 }
 .qa-q-view-content .entry-content img,
 .qa-a-item-content .entry-content img,
@@ -2662,11 +2703,7 @@ fieldset[disabled] .qa-c-item-buttons.collapsed .default-buttons > .qa-form-ligh
 }
 .qa-sidebar,
 .qa-q-view-follows,
-.qa-q-view-closed,
-.qa-form-tall-ok,
-.qa-form-wide-ok,
-.qa-form-tall-table > tbody > tr > td.qa-form-tall-ok,
-.qa-form-wide-table > tbody > tr > td.qa-form-wide-ok {
+.qa-q-view-closed {
   padding: 15px;
   margin-bottom: 20px;
   border: 1px solid transparent;
@@ -2674,53 +2711,27 @@ fieldset[disabled] .qa-c-item-buttons.collapsed .default-buttons > .qa-form-ligh
 }
 .qa-sidebar h4,
 .qa-q-view-follows h4,
-.qa-q-view-closed h4,
-.qa-form-tall-ok h4,
-.qa-form-wide-ok h4,
-.qa-form-tall-table > tbody > tr > td.qa-form-tall-ok h4,
-.qa-form-wide-table > tbody > tr > td.qa-form-wide-ok h4 {
+.qa-q-view-closed h4 {
   margin-top: 0;
   color: inherit;
 }
 .qa-sidebar .alert-link,
 .qa-q-view-follows .alert-link,
-.qa-q-view-closed .alert-link,
-.qa-form-tall-ok .alert-link,
-.qa-form-wide-ok .alert-link,
-.qa-form-tall-table > tbody > tr > td.qa-form-tall-ok .alert-link,
-.qa-form-wide-table > tbody > tr > td.qa-form-wide-ok .alert-link {
+.qa-q-view-closed .alert-link {
   font-weight: bold;
 }
 .qa-sidebar > p,
 .qa-q-view-follows > p,
 .qa-q-view-closed > p,
-.qa-form-tall-ok > p,
-.qa-form-wide-ok > p,
-.qa-form-tall-table > tbody > tr > td.qa-form-tall-ok > p,
-.qa-form-wide-table > tbody > tr > td.qa-form-wide-ok > p,
 .qa-sidebar > ul,
 .qa-q-view-follows > ul,
-.qa-q-view-closed > ul,
-.qa-form-tall-ok > ul,
-.qa-form-wide-ok > ul,
-.qa-form-tall-table > tbody > tr > td.qa-form-tall-ok > ul,
-.qa-form-wide-table > tbody > tr > td.qa-form-wide-ok > ul {
+.qa-q-view-closed > ul {
   margin-bottom: 0;
 }
 .qa-sidebar > p + p,
 .qa-q-view-follows > p + p,
-.qa-q-view-closed > p + p,
-.qa-form-tall-ok > p + p,
-.qa-form-wide-ok > p + p,
-.qa-form-tall-table > tbody > tr > td.qa-form-tall-ok > p + p,
-.qa-form-wide-table > tbody > tr > td.qa-form-wide-ok > p + p {
+.qa-q-view-closed > p + p {
   margin-top: 5px;
-}
-.qa-form-tall-table > tbody > tr > td.qa-form-tall-ok,
-.qa-form-wide-table > tbody > tr > td.qa-form-wide-ok,
-.qa-form-tall-table > tbody > tr > td.qa-form-tall-error,
-.qa-form-wide-table > tbody > tr > td.qa-form-wide-error {
-  display: table-cell !important;
 }
 .qa-sidebar {
   background-color: #d9edf7;

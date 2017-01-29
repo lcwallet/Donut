@@ -31,8 +31,9 @@ table {
 .qa-form-wide-ok,
 .qa-form-tall-table > tbody > tr > td.qa-form-tall-ok,
 .qa-form-wide-table > tbody > tr > td.qa-form-wide-ok {
-	.alert-success();
-	display: block;
+  .alert();
+  .alert-success();
+   display: block;
 }
 
 .qa-form-tall-error,
@@ -43,3 +44,13 @@ table {
 	margin-top: 10px;
 	display: block;
 }
+
+.qa-form-tall-table > tbody > tr > td.qa-form-tall-ok,
+.qa-form-wide-table > tbody > tr > td.qa-form-wide-ok,
+.qa-form-tall-table > tbody > tr > td.qa-form-tall-error,
+.qa-form-wide-table > tbody > tr > td.qa-form-wide-error {
+  display: table-cell !important;
+  border-radius: 0;
+  border : medium none;
+}
+
