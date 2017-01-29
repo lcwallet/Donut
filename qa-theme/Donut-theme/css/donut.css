@@ -1952,13 +1952,9 @@ fieldset[disabled] .qa-c-item-buttons.collapsed .default-buttons > .qa-form-ligh
 .qa-nav-cat {
   border-radius: 3px;
 }
+.qa-widget-main,
+.qa-widget-main-high,
 .qa-widget-full-high {
-  margin-bottom: 0;
-}
-.qa-widgets-main-high {
-  margin-bottom: 24px;
-}
-.qa-widget-main {
   margin: 0 0 15px 0;
 }
 .qa-widget-main-bottom {

@@ -289,9 +289,7 @@ li.search-dropdown{padding:0 10px 5px;width:250px}
 .qa-feed .qa-feed-icon{display:inline-block;background-color:#f0ad4e;color:#fff;padding:4px 8px;border:1px solid #faebcc;border-radius:5px;font-size:16px;line-height:1.42857143}
 .qa-feed .qa-feed-link{font-size:14px;color:#555}
 .qa-feed,.qa-nav-cat,.qa-sidebar,.qa-widget-side{border-radius:3px}
-.qa-widget-full-high{margin-bottom:0}
-.qa-widgets-main-high{margin-bottom:24px}
-.qa-widget-main{margin:0 0 15px}
+.qa-widget-full-high,.qa-widget-main,.qa-widget-main-high{margin:0 0 15px}
 .qa-widget-main-bottom{margin-bottom:0}
 .qa-nav-cat,.qa-widget-side{background:#fff;border-radius:5px}
 .qa-widget-side{margin-bottom:20px;background-color:#fff;border-radius:4px;border:1px solid transparent;-webkit-box-shadow:0 1px 1px rgba(0,0,0,.05);box-shadow:0 1px 1px rgba(0,0,0,.05);border-color:#ddd}
