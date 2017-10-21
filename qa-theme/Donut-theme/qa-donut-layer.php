@@ -1119,7 +1119,7 @@
                     $this->output( '</div>' );
                 } else {
                     $this->output( '<div class="no-items">',
-						'<div class="alert alert-info"><span class="fa fa-warning"></span> ' . $this->content['ranking_tags']['title'] . '</div>',
+						'<div class="alert alert-info"><span class="fa fa-warning"></span> ' . donut_lang('no_tags_message') . '</div>',
 						'</div>' );
                 }
 

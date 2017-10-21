@@ -25,6 +25,7 @@
         'ask_placeholder'             => 'Type your question',
         'ask_button'                  => 'Ask !',
         'more_actions'                => 'More actions',
+        'no_tags_message'             => 'There are no tags in your website. Tags will appear here as they are available.',
     );
 
     /*
